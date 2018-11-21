@@ -1,65 +1,66 @@
-$bg: #202027;
-$white: #fff;
-$table: #ca9d76;
-$gold: #f3aa14;
-
-.container {
-  align-items: center;
-  background-color: $bg;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  float: left;
 }
 
-.table {
-  animation: draw 11s linear infinite;
-  stroke: $table;
+.window {
+  overflow: hidden;
+  position: relative;
+   width: 25000px;
+  height: 143px;
+  right: 0px;
 }
 
-.ball {
-  animation: levitate .5s alternate ease-in-out infinite;
-  fill: $white;
+.wraper {
+  position: relative;
+  margin: auto;
+  margin-top: 250px;
+  width: 408px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border: 4px solid #1a96b7;
+  border-radius: 2px;
 }
 
-
-.gold {
-  fill: $gold;
+.list {
+  position: relative;
+  margin-left: 230;
+  display: inline-block;
 }
 
-
-
-
-.roulette {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 24px;
-  max-width: 500px;
-
-  svg {
-    fill: #B2AB46;
-    font-size: 32px;
-    height: 300px;
-    width: 300px;
-  }
+.list li {
+border: 4px solid transparent ;
+}
+.list li img {
+  width: 130px;
+  height: 130px;
 }
 
-@keyframes draw {
-  from {
-    stroke-dashoffset: 0;
-  }
+.arrowup {
+  position: absolute;
+  bottom: 0;
+  right: 200px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #1a96bf;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
 }
 
-
-@keyframes levitate {
-
-  0% {
-    transform: translate(0, 0);
-  }
-  
- 
-
-  100% {
-    transform: translate(0, 2px);
-  }
+.arrowdown {
+  position: absolute;
+  top: 0;
+  right: 200px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #1a96bf;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
 }
