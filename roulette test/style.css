@@ -1,0 +1,65 @@
+$bg: #202027;
+$white: #fff;
+$table: #ca9d76;
+$gold: #f3aa14;
+
+.container {
+  align-items: center;
+  background-color: $bg;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.table {
+  animation: draw 11s linear infinite;
+  stroke: $table;
+}
+
+.ball {
+  animation: levitate .5s alternate ease-in-out infinite;
+  fill: $white;
+}
+
+
+.gold {
+  fill: $gold;
+}
+
+
+
+
+.roulette {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 24px;
+  max-width: 500px;
+
+  svg {
+    fill: #B2AB46;
+    font-size: 32px;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@keyframes levitate {
+
+  0% {
+    transform: translate(0, 0);
+  }
+  
+ 
+
+  100% {
+    transform: translate(0, 2px);
+  }
+}
